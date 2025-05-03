@@ -43,7 +43,7 @@
 
 | Login Screen | Photo Edit | Video Edit | Media Selection |
 |:------------|:------------|:------------|:------------|
-| ![Login Screen](path/to/login_screen.png) | ![Photo Edit](path/to/photo_edit.png) | ![Video Edit](path/to/video_edit.png) | ![Media Selection](path/to/media_selection.png) |
+| ![Login Screen](path/to/login_screen.png) | ![Photo Edit](path/to/photo_edit.png) | ![Video Edit](path/to/video_edit.png) | ![Media Selection](WhatsApp Image 2025-05-04 at 00.34.05_aef507bd.jpg) |
 
 ---
 
