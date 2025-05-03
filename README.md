@@ -36,17 +36,6 @@
 | **Firebase Authentication** | User authentication system |
 
 ---
-
-## 📷 App Screenshots
-
-> *Add your screenshots here to showcase your app interface.*
-
-| Login Screen | Photo Edit | Video Edit | Media Selection |
-|:------------|:------------|:------------|:------------|
-| ![Login Screen](path/to/login_screen.png) | ![Photo Edit](path/to/photo_edit.png) | ![Video Edit](path/to/video_edit.png) | ![Media Selection](path/to/WhatsApp Image 2025-05-04 at 00.34.05_aef507bd.jpg) |
-
----
-
 ## 📦 Getting Started
 
 ### 📋 Prerequisites
