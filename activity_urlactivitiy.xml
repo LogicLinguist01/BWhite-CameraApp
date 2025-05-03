@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingTop="5dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="80dp"
+    tools:context=".URLActivitiy">
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/image_save"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/login_button"
+        android:drawableStart="@drawable/image_download"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="Save Picture"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/imageContainerURL"
+        android:layout_width="400dp"
+        android:layout_height="500dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/cream"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Original Image (Before) -->
+        <ImageView
+            android:id="@+id/beforeimageview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/white"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_launcher_background"
+            tools:ignore="ContentDescription" />
+
+        <!-- After Image (Overlay) -->
+        <!-- Ensures it's above the original image -->
+
+        <!-- Vertical Separator Line -->
+        <ImageView
+            android:id="@+id/afterimageview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/cream"
+            android:backgroundTint="@color/white"
+            android:backgroundTintMode="src_over"
+            android:elevation="2dp"
+            android:scaleType="fitXY"
+            tools:ignore="ContentDescription" />
+
+        <View
+            android:id="@+id/separatorURl"
+            android:layout_width="4dp"
+            android:layout_height="match_parent"
+
+            android:elevation="3dp" />
+
+        <ImageView
+            android:id="@+id/image_view_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="10dp"
+            app:srcCompat="@drawable/camrea_backgrond" /> <!-- Ensures it's visible above the images -->
+
+    </FrameLayout>
+
+    <!-- SeekBar to Adjust Before-After Split -->
+    <SeekBar
+        android:id="@+id/seekBarURL"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:max="100"
+        android:progress="50"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageContainerURL" />
+
+
+    <!-- Button to Select Image -->
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/URLimageDownloadButton"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/login_button"
+        android:drawableStart="@drawable/image_download"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="Download Picture"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/image_save"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/Downloadlink1"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/textarea"
+        android:elevation="10dp"
+        android:hint="@string/enter_url_here_to_download"
+        android:paddingStart="10dp"
+        android:textColor="@color/green"
+        android:textColorHint="@color/green"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarURL"
+        tools:layout_editor_absoluteX="0dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

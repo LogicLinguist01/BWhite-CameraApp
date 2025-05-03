@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitet"
+    tools:context=".MainActivity">
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Logout_button"
+        android:layout_width="350sp"
+        android:layout_height="100sp"
+        android:background="@drawable/login_button"
+        android:drawableStart="@drawable/logout_picture"
+        android:drawablePadding="10dp"
+        android:elevation="10dp"
+        android:padding="6dp"
+        android:paddingStart="30dp"
+        android:paddingEnd="50dp"
+        android:text="@string/logout"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/external_link_button"
+        app:layout_constraintVertical_bias="0.126" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/what_would_you_like_to_do"
+        android:textAlignment="center"
+        android:textColor="@color/grey"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/photoButton"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/login_button"
+        android:drawableStart="@drawable/camera_picture"
+        android:drawablePadding="10dp"
+        android:includeFontPadding="true"
+        android:padding="6dp"
+        android:paddingStart="30dp"
+        android:paddingEnd="50dp"
+        android:text="@string/photo_edit"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/videoMain"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/login_button"
+        android:drawableStart="@drawable/video_picture"
+        android:drawablePadding="10dp"
+        android:padding="6dp"
+        android:paddingStart="30dp"
+        android:paddingEnd="50dp"
+        android:text="@string/video_edit"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/photoButton" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/external_link_button"
+        android:layout_width="350sp"
+        android:layout_height="100sp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/login_button"
+        android:drawableStart="@drawable/link_picture"
+        android:drawablePadding="10dp"
+        android:padding="6dp"
+        android:paddingStart="30dp"
+        android:paddingEnd="50dp"
+        android:text="Using external link"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/videoMain" />
+
+    <TextView
+        android:id="@+id/main_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/textview"
+        android:textColor="@color/green"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="56dp"
+        android:text="@string/app_version_0_0_1"
+        android:textColor="@color/green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

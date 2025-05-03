@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    tools:context=".galleryPhotoedit">
+
+
+    <FrameLayout
+        android:id="@+id/imageContainer"
+        android:layout_width="400dp"
+        android:layout_height="500dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/cream"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Original Image (Before) -->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/white"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_launcher_background"
+            tools:ignore="ContentDescription" />
+
+        <!-- After Image (Overlay) -->
+        <!-- Ensures it's above the original image -->
+
+        <!-- Vertical Separator Line -->
+        <ImageView
+            android:id="@+id/frameImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/cream"
+            android:backgroundTintMode="src_in"
+            android:elevation="2dp"
+            android:scaleType="fitXY"
+
+            tools:ignore="ContentDescription" />
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="4dp"
+            android:layout_height="match_parent"
+            android:elevation="3dp" />
+
+        <ImageView
+            android:id="@+id/addimages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="200dp"
+            android:elevation="10dp"
+            app:srcCompat="@drawable/add" /> <!-- Ensures it's visible above the images -->
+
+    </FrameLayout>
+
+    <!-- SeekBar to Adjust Before-After Split -->
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:max="100"
+        android:progress="50"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageContainer" />
+
+    <!-- Button to Select Image -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/selectImageButton"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/login_button"
+        android:drawableStart="@drawable/gallery_image_button"
+        android:paddingStart="10dp"
+        android:text="@string/select_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seekBar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
